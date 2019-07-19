@@ -114,7 +114,7 @@ module.exports = class Runner {
         await this.waitForConsumer()
       }
       await this.consumerGroup.leave()
-    } catch (e) {}
+    } catch (e) { }
   }
 
   waitForConsumer() {
@@ -272,7 +272,7 @@ module.exports = class Runner {
           }
 
           if (batch.isEmpty()) {
-            return
+            this.consumerGroup.offsetManager.resolvedOffsets[batch.topic][batch.partition] = batch.lastOffset();
           }
 
           await onBatch(batch)
