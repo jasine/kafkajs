@@ -1,5 +1,5 @@
 {
-  "name": "kafkajs",
+  "name": "kafkajs-dg",
   "version": "1.9.3",
   "description": "A modern Apache Kafka client for node.js",
   "author": "Tulio Ornelas <ornelas.tulio@gmail.com>",
